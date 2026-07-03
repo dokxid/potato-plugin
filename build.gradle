@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+}
+
+group = 'mom.starchie.plugtato'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    maven { url 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/' }
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:6.0.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    compileOnly 'org.spigotmc:spigot-api:1.21.1-R0.1-SNAPSHOT'
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'mom.starchie.plugtato.Main'
+    }
+    duplicatesStrategy = 'exclude'
+}
+
+test {
+    useJUnitPlatform()
+}

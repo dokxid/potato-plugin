@@ -1,0 +1,6 @@
+name: plugtato
+description: testing plugin
+version: 1.0
+author: dokxid
+main: mom.starchie.plugtato.Main
+api-version: "1.21.1"
